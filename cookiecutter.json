@@ -3,6 +3,7 @@
 
     "project_name": "awesome_deeplabcut_project",
     "project_description": "An awesome DeepLabCut project.",
+    "use_GUI": "y",
 
     "jupyter_port": 9000,
     "tensorboard_port": 9001

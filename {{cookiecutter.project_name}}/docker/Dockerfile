@@ -71,6 +71,9 @@ RUN pip install tensorpack
 RUN pip install easydict
 RUN pip install statsmodels==0.10.1
 
+RUN sudo apt-get install -y \
+    libgtk-3-0 python3-tk libsdl2-2.0-0 libsdl2-dev
+
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 
