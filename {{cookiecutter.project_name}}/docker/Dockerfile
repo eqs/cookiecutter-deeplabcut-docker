@@ -49,14 +49,27 @@ RUN echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib' >> /home/ubunt
 # Install Python packages
 # ------------------------------------------------------------
 
+# Install dependencies of wxPython
+RUN sudo apt-get install -y libgtk2.0-dev libgtk-3-dev \
+    libjpeg-dev libtiff-dev \
+    libsdl1.2-dev libgstreamer-plugins-base1.0-dev \
+    libnotify-dev freeglut3 freeglut3-dev libsm-dev \
+    libwebkitgtk-dev libwebkitgtk-3.0-dev
+
+RUN pip install --no-deps deeplabcut
+
+# Install dependencies of DeepLabCut
+RUN pip install -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython
+RUN conda install -c conda-forge ruamel.yaml
 RUN pip install opencv-python==3.4.5.20
-RUN pip install matplotlib==3.0.3
-RUN pip install tables==3.4.3
 RUN pip install tensorflow-gpu==1.13.1
 RUN pip install tensorboard
 RUN pip install imgaug
-RUN pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04/wxPython-4.0.3-cp37-cp37m-linux_x86_64.whl
-RUN pip install deeplabcut
+RUN pip install intel-openmp
+RUN pip install moviepy
+RUN pip install tensorpack
+RUN pip install easydict
+RUN pip install statsmodels==0.10.1
 
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
