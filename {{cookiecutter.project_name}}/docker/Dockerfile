@@ -49,19 +49,14 @@ RUN echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib' >> /home/ubunt
 # Install Python packages
 # ------------------------------------------------------------
 
-RUN pip install future six tensorboardX
-RUN pip install --upgrade --force-reinstall matplotlib
-
-RUN pip install tensorflow tensorflow-gpu
+RUN pip install opencv-python==3.4.5.20
+RUN pip install matplotlib==3.0.3
+RUN pip install tables==3.4.3
+RUN pip install tensorflow-gpu==1.13.1
 RUN pip install tensorboard
-
-RUN conda install -c pytorch pytorch torchvision
-RUN conda install cudnn
-
-RUN pip install opencv-python
-
-RUN pip install chainer chainercv
-RUN conda install -c pytorch pytorch==1.3.* torchvision==0.4.*
+RUN pip install imgaug
+RUN pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04/wxPython-4.0.3-cp37-cp37m-linux_x86_64.whl
+RUN pip install deeplabcut
 
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
