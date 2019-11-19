@@ -1,4 +1,4 @@
-# cookiecutter-dl-work
+# cookiecutter-deeplabcut-docker
 
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for deep learning research
 
@@ -29,5 +29,5 @@ Access following URLs from web browser:
 * `localhost:<jupyter_port>`
 * `localhost:<tensorboard_port>`
 
-Happy deep learning!
+Happy DeepLabCutting!
 
