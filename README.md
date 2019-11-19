@@ -9,6 +9,7 @@ A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for deep
 * `author_name`: your name
 * `project_name`: your project name
 * `project_description`: description of your project (this will be inserted to `README.md`)
+* `use_GUI`: flag of GUI mode
 * `jupyter_port`: a port to access JupyterLab running on a container
 * `tensorboard_port`: a port to access TensorBoard running on a container
 
