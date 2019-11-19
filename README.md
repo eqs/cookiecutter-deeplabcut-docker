@@ -1,6 +1,6 @@
 # cookiecutter-deeplabcut-docker
 
-A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for deep learning research
+A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for DeepLabCut environment
 
 ## Usage
 
